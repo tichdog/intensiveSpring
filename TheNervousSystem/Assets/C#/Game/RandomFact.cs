@@ -25,7 +25,6 @@ public class RandomFact : MonoBehaviour
         }
        
         output.text = "" + fact[t];
-        temp = t;
-        
+        temp = t; 
     }
 }
