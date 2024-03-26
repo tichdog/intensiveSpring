@@ -11,4 +11,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Creatures/Worm.unity
     guid: 06f192bd8b4969e4ea7deb3034ddffd3
+  - enabled: 1
+    path: Assets/Scenes/Creatures/Frog.unity
+    guid: 4271a3dbd221294439ad8451c3a6659a
+  - enabled: 1
+    path: Assets/Scenes/Creatures/Grasshopper.unity
+    guid: 855ce27c344577a4cbbfcad270702492
+  - enabled: 1
+    path: Assets/Scenes/Creatures/Human.unity
+    guid: 8ee157f369001f2409c979131ac1e4f8
+  - enabled: 1
+    path: Assets/Scenes/Creatures/Hydra.unity
+    guid: 949dcd6f03cb2314194d981a9d5bef88
   m_configObjects: {}
