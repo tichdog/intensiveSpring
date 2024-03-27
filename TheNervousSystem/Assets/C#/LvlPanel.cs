@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LvlPanel : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class LvlPanel : MonoBehaviour
     public GameObject panelOne;
     public GameObject panelTwo;
     private Animator anim;
+    public Button button;
 
     public void Start()
     {
@@ -15,9 +17,10 @@ public class LvlPanel : MonoBehaviour
     }
     public void _lvlPanelOpen()
     {
+
         panelOne.SetActive(false);
         panelTwo.SetActive(false);
-
+        button.interactable = false;
         anim.Play("open");
     }
     
@@ -25,6 +28,7 @@ public class LvlPanel : MonoBehaviour
     {
         anim.Play("close");
         Invoke("open", speed);
+        button.interactable = true;
     }
 
     private void open()
