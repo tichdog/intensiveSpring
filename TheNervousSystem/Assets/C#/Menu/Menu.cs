@@ -13,6 +13,7 @@ public class Menu : MonoBehaviour
     public GameObject closePanel;
     public void Start()
     {
+        
         panelLvlSelection.SetActive(false);
         closePanel.SetActive(false);
         /*panelLvlSelection.gameObject.GetComponent<RectTransform>().localScale = new Vector3(0,0,0);*/
@@ -54,10 +55,11 @@ public class Menu : MonoBehaviour
 
     }
 
-    
     public void _exit()
     {
         Application.Quit();
         // Debug.Log("exit");
     }
+
+
 }
