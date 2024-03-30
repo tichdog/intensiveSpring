@@ -30,4 +30,9 @@ public class WinScript : MonoBehaviour
     {
         myElement++;//Увеличиваем
     }
+
+    public static void Remove()
+    {
+        myElement = 0;
+    }
 }

@@ -10,4 +10,16 @@ public class GoToAddLvl : MonoBehaviour
     {
         SceneManager.LoadScene("Puzzle");
     }
+
+    public void _Menu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void _Restart()
+    {
+        _Puzzle();
+        WinScript.Remove();
+
+    }
 }
