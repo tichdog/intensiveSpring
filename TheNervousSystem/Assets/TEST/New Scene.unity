@@ -277,6 +277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec70016f6e7532449a08f9dfb499384a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameCreature: 
   count: 5
   startWidth: 1
   endWidth: 1
