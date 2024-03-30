@@ -5,6 +5,18 @@ using UnityEngine.UI;
 
 public class TimerLvl : MonoBehaviour
 {
-    
+    public float time = 30;
 
+    public Text text;
+
+    public void Start()
+    {
+        text.text = "Оставшееся время: " +  time.ToString();
+    }
+
+    public void Update()
+    {
+        time -= Time.deltaTime;
+        text.text = "Оставшееся время: " + Mathf.Round(time).ToString();
+    }
 }

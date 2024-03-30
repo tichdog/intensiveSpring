@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Creatures/Hydra.unity
     guid: 949dcd6f03cb2314194d981a9d5bef88
+  - enabled: 1
+    path: Assets/Scenes/Puzzle.unity
+    guid: 8c23963acb6aeee48901048755359ab6
   m_configObjects: {}

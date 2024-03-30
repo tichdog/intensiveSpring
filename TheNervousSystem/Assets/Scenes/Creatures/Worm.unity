@@ -157,8 +157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1455, y: 523}
-  m_SizeDelta: {x: 504, y: 121}
+  m_AnchoredPosition: {x: -788.9, y: 523}
+  m_SizeDelta: {x: 1836.3, y: 121}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &37506039
 MonoBehaviour:
@@ -182,18 +182,19 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 166
+    m_FontSize: 130
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 175
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 01:01
+  m_Text: "\u041E\u0441\u0442\u0430\u0432\u0448\u0435\u0435\u0441\u044F \u0432\u0440\u0435\u043C\u044F:
+    01:01"
 --- !u!222 &37506040
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -598,7 +599,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.2856979, y: 0.48572224}
   m_AnchorMax: {x: 0.84588546, y: 0.9638889}
-  m_AnchoredPosition: {x: -1.6132812, y: -6.9628296}
+  m_AnchoredPosition: {x: -1.6132812, y: -6.9628906}
   m_SizeDelta: {x: -18.20044, y: 2.5092773}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &778625843
@@ -747,7 +748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   helpBtn: {fileID: 791647937}
-  Timer: {fileID: 0}
+  Timer: {fileID: 1383522161}
 --- !u!1 &791647937
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,7 +906,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.042000003, y: 0.057444446}
   m_AnchorMax: {x: 0.17084378, y: 0.28437036}
-  m_AnchoredPosition: {x: 3154, y: 1473}
+  m_AnchoredPosition: {x: 3153.9998, y: 1473.0001}
   m_SizeDelta: {x: 6, y: 9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1156602274
@@ -1238,8 +1239,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dac8678c7d3f434182ee1a90eec6f25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerText: {fileID: 37506039}
-  delta: 1
+  time: 30
+  text: {fileID: 37506039}
 --- !u!1 &1454903038
 GameObject:
   m_ObjectHideFlags: 0
