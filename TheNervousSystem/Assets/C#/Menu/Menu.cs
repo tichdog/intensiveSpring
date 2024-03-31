@@ -10,12 +10,10 @@ public class Menu : MonoBehaviour
 
     public Animator animator;
 
-    public GameObject closePanel;
     public void Start()
     {
         
         panelLvlSelection.SetActive(false);
-        closePanel.SetActive(false);
         /*panelLvlSelection.gameObject.GetComponent<RectTransform>().localScale = new Vector3(0,0,0);*/
         //_backToMenu();
     }
@@ -37,29 +35,5 @@ public class Menu : MonoBehaviour
         panelLvlSelection.SetActive(false);*/
         // Debug.Log("Переход на панель меню");
     }
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="flag">true - activ false - disactiv </param>
-    public void _closePanelActivity(bool flag)
-    {
-        if(flag)
-        {
-            closePanel.SetActive(true);
-        }
-        else
-        {
-            closePanel.SetActive(false);
-        }
-
-    }
-
-    public void _exit()
-    {
-        Application.Quit();
-        // Debug.Log("exit");
-    }
-
 
 }
