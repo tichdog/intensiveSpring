@@ -15,6 +15,8 @@ public class LinePointBtn : MonoBehaviour
     private bool flag = true;
 
     private int id = 0;
+
+    public Vector2 mouse;
     public void Start()
     {
         switch (nameCreature)
@@ -55,24 +57,25 @@ public class LinePointBtn : MonoBehaviour
         line.positionCount = 0; // Обнуляем точки
     }
 
+
     public void _click(GameObject obj)
     {
         if(point.IndexOf(int.Parse(obj.name)) == -1)
         {
+            
             Vector3 temp;
             // Button position
             temp.x = obj.transform.position.x;
             temp.y = obj.transform.position.y;
             temp.z = 1;
 
+            
             // add number button to list
             point.Add(int.Parse(obj.name));
 
             line.positionCount++;
             line.SetPosition(line.positionCount - 1, temp);
-        
-            Debug.Log(line.positionCount + " positionCNT");
-            Debug.Log(temp.x + " vector " + temp.y);
+            
         }
         else
         {
