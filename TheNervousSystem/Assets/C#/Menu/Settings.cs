@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Unity.VisualScripting.Member;
 
 public class Settings : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Settings : MonoBehaviour
     public GameObject[] obj;
     public GameObject[] close;
     public float time = 0f;
+    public AudioSource source;
     public void _open()
     {
         animator.Play("open");
@@ -37,6 +39,11 @@ public class Settings : MonoBehaviour
         {
             i.SetActive(b);
         }
+    }
+
+    public void _anotherSong()
+    {
+         source.Stop();
     }
 
 }
