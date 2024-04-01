@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8479720249047616352}
   - component: {fileID: 7170874473023991006}
-  - component: {fileID: 1732892799226314811}
+  - component: {fileID: -6335116540249371594}
   m_Layer: 0
-  m_Name: Line_1
+  m_Name: wormLineRender
   m_TagString: point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -138,7 +138,7 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
---- !u!114 &1732892799226314811
+--- !u!114 &-6335116540249371594
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,6 +147,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1031133549509415137}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c5e7567ed741304794ab4657d431e05, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ef74324854ed534e983691d32332e2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

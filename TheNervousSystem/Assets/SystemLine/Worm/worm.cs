@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.TerrainTools;
 
-public class testinLine : MonoBehaviour
+public class worm : MonoBehaviour
 {
     private LineRenderer line;
     static Vector3 one = Vector3.zero;
@@ -16,8 +16,8 @@ public class testinLine : MonoBehaviour
         line.endWidth = 0.5f;
         line.positionCount = 0; // Обнуляем точки
 
-        one = LinePointBtnTEST.coordinateOne();
-        two = LinePointBtnTEST.coordinateTwo();
+        one = WormLine.coordinateOne();
+        two = WormLine.coordinateTwo();
 
         paint();
 

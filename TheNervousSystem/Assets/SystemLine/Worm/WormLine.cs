@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Linq;
 using UnityEngine.Experimental.GlobalIllumination;
 
-public class LinePointBtnTEST : MonoBehaviour
+public class WormLine : MonoBehaviour
 {
     // Счетчик для линий
     public int count = 0;
@@ -19,8 +19,8 @@ public class LinePointBtnTEST : MonoBehaviour
 
     public bool lvl = false;
 
-    public string key_1 = "2345";
-    public string key_2 = "2678";
+    private string key_1 = "1234";
+
     private bool flag = false;
     public void _click(GameObject obj)
     {
@@ -78,15 +78,7 @@ public class LinePointBtnTEST : MonoBehaviour
 
         Debug.Log(s);
 
-        if (s[0] != '1')
-        {
-            lvl = false;
-            _reset();
-            Debug.Log("FAIL_2");
-            return;
-        }
-
-        if(s.IndexOf(key_1) != -1 && s.IndexOf(key_2) != -1)
+        if(s.IndexOf(key_1) != -1)
         {
             lvl = true;
             Debug.Log("LVL COMPLETE");
