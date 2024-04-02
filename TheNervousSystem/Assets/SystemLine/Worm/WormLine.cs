@@ -19,15 +19,25 @@ public class WormLine : MonoBehaviour
 
     public bool lvl = false;
 
+    public Animator animator;
+    public GameObject timePanel;
+    public GameObject btn;
+
     private string key_1 = "1234";
 
     private bool flag = false;
+
+    public void Start()
+    {
+        btn.SetActive(false);
+    }
+
     public void _click(GameObject obj)
     {
         string name = obj.name;
         int temp = int.Parse(name);
         point.Add(temp);
-        // check to one point two raz
+
         if (!flag)
         {
             one = GetPos(obj);
@@ -80,7 +90,17 @@ public class WormLine : MonoBehaviour
 
         if(s.IndexOf(key_1) != -1)
         {
+            GameObject[] obj;
+            obj = GameObject.FindGameObjectsWithTag("point");
+            foreach (GameObject i in obj)
+            {
+                Destroy(i);
+            }
+
             lvl = true;
+            timePanel.SetActive(false);       
+            animator.Play("compl");
+            Invoke("_btn",0.8f);
             Debug.Log("LVL COMPLETE");
         }
         else
@@ -90,6 +110,11 @@ public class WormLine : MonoBehaviour
             Debug.Log("FAIL");
         }
 
+    }
+
+    public void _btn()
+    {
+        btn.SetActive(true);
     }
 
     public static Vector3 coordinateOne()

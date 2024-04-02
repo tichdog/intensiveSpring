@@ -12,8 +12,8 @@ public class worm : MonoBehaviour
     public void Start()
     {
         line = GetComponent<LineRenderer>();
-        line.startWidth = 0.5f;
-        line.endWidth = 0.5f;
+        line.startWidth = 0.2f;
+        line.endWidth = 0.2f;
         line.positionCount = 0; // Обнуляем точки
 
         one = WormLine.coordinateOne();
