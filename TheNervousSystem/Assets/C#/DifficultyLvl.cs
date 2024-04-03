@@ -6,36 +6,44 @@ using UnityEngine.UI;
 public class DifficultyLvl : MonoBehaviour
 {
     private int temp = 0;
-    public Dropdown dropdown;
-
+    public GameObject BtnText;
+    bool flag;
+    // false новичок true опытный
 
     public void Start()
     {
         if(PlayerPrefs.GetInt("diff") != 0)
         {
             temp = PlayerPrefs.GetInt("diff");
-            dropdown.value = temp;
+            BtnText.GetComponent<Text>().text = "Опытный";
+            flag = true;
         }
         else
         {
             temp = 0;
             PlayerPrefs.SetInt("diff", 0);
-            dropdown.value = temp;
+            BtnText.GetComponent<Text>().text = "Новичок";
+            flag = false;
         }
     }
 
-    public void _selectDiff(int value)
+    public void _selectDiff()
     {
-        if (value == 0)
-        {
-            PlayerPrefs.SetInt("diff", 0);
-            Debug.Log("Новичок" + PlayerPrefs.GetInt("diff"));
-        }
-
-        if(value == 1)
+        if(flag == false)
         {
             PlayerPrefs.SetInt("diff", 1);
-            Debug.Log("Опытный" + PlayerPrefs.GetInt("diff"));
+            BtnText.GetComponent<Text>().text = "Опытный";
+            flag = true;
+            return;
+        }
+
+        if (flag == true)
+        {
+            PlayerPrefs.SetInt("diff", 0);
+            BtnText.GetComponent<Text>().text = "Новичок";
+            flag = false;
+            return;
+
         }
     }
 }

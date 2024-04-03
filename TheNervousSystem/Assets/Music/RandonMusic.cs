@@ -16,8 +16,7 @@ public class RandonMusic : MonoBehaviour
     public AudioClip[] clip;
     public void _rnd(int temp)
     {
-        source.PlayOneShot(clip[temp]);
-        
+        source.PlayOneShot(clip[temp]);        
     }
 
     public void Update()

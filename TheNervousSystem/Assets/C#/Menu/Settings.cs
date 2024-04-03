@@ -13,15 +13,15 @@ public class Settings : MonoBehaviour
     public void _open()
     {
         animator.Play("open");
-        objOffOn(true, obj);
-        Invoke("off", time);
+        //objOffOn(true, obj);
+        //Invoke("off", time);
     }
 
     public void _close()
     {
-        objOffOn(false, obj);
+        //objOffOn(false, obj);
         animator.Play("close");
-        Invoke("on", time);
+        //Invoke("on", time);
     }
 
     private void on()

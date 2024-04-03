@@ -27,9 +27,18 @@ public class WormLine : MonoBehaviour
 
     private bool flag = false;
 
+    public GameObject[] OFF;
     public void Start()
     {
         btn.SetActive(false);
+    }
+
+    public void off()
+    {
+        foreach(GameObject i in OFF)
+        {
+            i.SetActive(false);
+        }
     }
 
     public void _click(GameObject obj)
@@ -164,5 +173,6 @@ public class WormLine : MonoBehaviour
     {
         animator.Play("finich");
         btn.SetActive(false);
+        off();
     }
 }
