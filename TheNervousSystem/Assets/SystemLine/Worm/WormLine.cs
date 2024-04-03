@@ -98,7 +98,18 @@ public class WormLine : MonoBehaviour
             }
 
             lvl = true;
-            timePanel.SetActive(false);       
+            timePanel.SetActive(false);   
+            
+            // Чек ачивки
+            if(PlayerPrefs.GetInt("diff") == 0)
+            {
+                PlayerPrefs.SetInt("lvl1", 1);
+            }
+            else
+            {
+                PlayerPrefs.SetInt("lvl1", 2);
+            }
+
             animator.Play("compl");
             Invoke("_btn",0.8f);
             Debug.Log("LVL COMPLETE");
@@ -147,5 +158,11 @@ public class WormLine : MonoBehaviour
         {
             Destroy(i);
         }
+    }
+
+    public void _continue()
+    {
+        animator.Play("finich");
+        btn.SetActive(false);
     }
 }

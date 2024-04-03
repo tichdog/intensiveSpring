@@ -5,31 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class BackToMenu : MonoBehaviour
 {
-    public GameObject helpPanel;
-    private bool flag;
-    public Animator anim;
-    public void Start()
-    {
-        helpPanel.SetActive(false);
-        flag = false;
-    }
-
-    public void _help()
-    {
-        if(flag == false)
-        {
-            anim.Play("open");
-            flag = true;
-            return;
-        }
-
-        if(flag == true)
-        {
-            anim.Play("close");
-            flag = false;
-            return;
-        }
-    }
+    
     public void _backToMenu()
     {
         SceneManager.LoadScene("Menu");
@@ -38,5 +14,10 @@ public class BackToMenu : MonoBehaviour
     public void _restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void _loadScen(string name)
+    {
+        SceneManager.LoadScene(name);
     }
 }

@@ -7,6 +7,11 @@ public class LoadDifficulty : MonoBehaviour
 {
     public GameObject helpBtn;
     public GameObject Timer;
+
+    public GameObject helpPanel;
+    private bool flag;
+    public Animator anim;
+
     public void Start()
     {
         if(PlayerPrefs.GetInt("diff") == 0)
@@ -18,6 +23,25 @@ public class LoadDifficulty : MonoBehaviour
         {
             Timer.SetActive(true);
             helpBtn.SetActive(false);
+        }
+
+        helpPanel.SetActive(false);
+        flag = false;
+    }
+    public void _help()
+    {
+        if (flag == false)
+        {
+            anim.Play("open");
+            flag = true;
+            return;
+        }
+
+        if (flag == true)
+        {
+            anim.Play("close");
+            flag = false;
+            return;
         }
     }
 }
