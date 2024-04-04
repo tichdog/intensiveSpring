@@ -24,6 +24,7 @@ public class Settings : MonoBehaviour
         //Invoke("on", time);
     }
 
+
     private void on()
     {
         objOffOn(true, close);
