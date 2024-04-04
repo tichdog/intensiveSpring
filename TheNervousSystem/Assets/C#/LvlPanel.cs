@@ -10,17 +10,38 @@ public class LvlPanel : MonoBehaviour
     public GameObject panelTwo;
     private Animator anim;
     public Button button;
+    // false -> open | true -> close
+    private bool flag;
 
     public void Start()
     {
+        flag = false; 
         anim = GetComponent<Animator>();
     }
+
+    public void _btn()
+    {
+        if(flag == false)
+        {
+            _lvlPanelOpen();
+            flag = true;
+            return;
+        }
+
+        if(flag == true)
+        {
+            _close();
+            flag = false;
+            return;
+        }
+    }
+
     public void _lvlPanelOpen()
     {
 
         panelOne.SetActive(false);
         panelTwo.SetActive(false);
-        button.interactable = false;
+        //button.interactable = false;
         anim.Play("open");
     }
     
@@ -28,7 +49,7 @@ public class LvlPanel : MonoBehaviour
     {
         anim.Play("close");
         Invoke("open", speed);
-        button.interactable = true;
+        //button.interactable = true;
     }
 
     private void open()
