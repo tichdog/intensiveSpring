@@ -9,7 +9,7 @@ public class MovingPuzzle : MonoBehaviour
     float startPosX;
     float startPosY;
     public GameObject form;
-    private float inaccuracy = 250f;
+    private float inaccuracy = 200f;
     bool finish;
 
     void OnMouseDown()
