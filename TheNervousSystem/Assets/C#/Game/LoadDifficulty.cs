@@ -7,7 +7,7 @@ public class LoadDifficulty : MonoBehaviour
 {
     public GameObject helpBtn;
     public GameObject Timer;
-
+    public GameObject VoiceOBJ;
     public GameObject helpPanel;
     private bool flag;
     public Animator anim;
@@ -24,6 +24,8 @@ public class LoadDifficulty : MonoBehaviour
             Timer.SetActive(true);
             helpBtn.SetActive(false);
         }
+
+        VoiceOBJ.transform.position = helpBtn.transform.position;
 
         helpPanel.SetActive(false);
         flag = false;
