@@ -14,7 +14,7 @@ public class MovingPuzzle : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && Time.timeScale > 0)
         {
             move = true;
             mousePos = Input.mousePosition;

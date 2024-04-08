@@ -20,6 +20,7 @@ public class GrasshopperLine : MonoBehaviour
     public bool lvl = false;
 
     public Animator animator;
+    public Animation catAnim;
     public GameObject timePanel;
     public GameObject btn;
 
@@ -27,10 +28,13 @@ public class GrasshopperLine : MonoBehaviour
 
     private bool flag = false;
 
+    public static bool time;
+
     public GameObject[] OFF;
 
     public void Start()
     {
+        time = true; // true время есть 
         btn.SetActive(false);
     }
 
@@ -76,10 +80,26 @@ public class GrasshopperLine : MonoBehaviour
             flag = false;
         }
 
-        if(point.Count == count)
+    }
+
+    private void Update()
+    {
+        if (point.Count == count && WinHard.finish == true && lvl == false) // finish - на местах ли элементы
         {
             check();
-        }   
+        }
+
+        if (point.Count == count && PlayerPrefs.GetInt("diff") == 0 && lvl == false)
+        {
+            check();
+        }
+
+        if (point.Count > count + 1 || time == false)
+        {
+            lvl = false;
+            _reset();
+            Debug.Log("FAIL");
+        }
     }
 
     public void check()
@@ -161,6 +181,8 @@ public class GrasshopperLine : MonoBehaviour
     
     public void _reset()
     {
+        catAnim.Play();
+        flag = false;
         point.Clear();
         GameObject[] obj;
         obj = GameObject.FindGameObjectsWithTag("point");

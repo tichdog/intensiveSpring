@@ -96,7 +96,6 @@ public class WormLine : MonoBehaviour
 
         if (point.Count > count + 1 || time == false)
         {
-            //catAnim.Play("fail");
             lvl = false;
             _reset();
             Debug.Log("FAIL");
