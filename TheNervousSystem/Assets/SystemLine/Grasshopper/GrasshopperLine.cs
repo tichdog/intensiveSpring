@@ -23,13 +23,23 @@ public class GrasshopperLine : MonoBehaviour
     public GameObject timePanel;
     public GameObject btn;
 
-    private string key_1 = "1234";
+    private string key_1 = "12345";
 
     private bool flag = false;
+
+    public GameObject[] OFF;
 
     public void Start()
     {
         btn.SetActive(false);
+    }
+
+    public void off()
+    {
+        foreach (GameObject i in OFF)
+        {
+            i.SetActive(false);
+        }
     }
 
     public void _click(GameObject obj)
@@ -164,5 +174,6 @@ public class GrasshopperLine : MonoBehaviour
     {
         animator.Play("finich");
         btn.SetActive(false);
+        off();
     }
 }

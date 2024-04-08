@@ -21,11 +21,12 @@ public class LoadDifficulty : MonoBehaviour
         }
         else
         {
+            VoiceOBJ.transform.position = helpBtn.transform.position;
             Timer.SetActive(true);
             helpBtn.SetActive(false);
         }
 
-        VoiceOBJ.transform.position = helpBtn.transform.position;
+        
 
         helpPanel.SetActive(false);
         flag = false;

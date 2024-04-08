@@ -883,8 +883,12 @@ MonoBehaviour:
   sys: {fileID: 601422211}
   elem: {fileID: 1031133549509415137, guid: 3dcc3173dea616047a93eec8b094daa1, type: 3}
   lvl: 0
+  animator: {fileID: 0}
+  timePanel: {fileID: 0}
+  btn: {fileID: 0}
   key_1: 2345
   key_2: 2678
+  OFF: []
 --- !u!4 &601422213
 Transform:
   m_ObjectHideFlags: 0

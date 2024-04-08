@@ -9,4 +9,19 @@ public class LvlSelect : MonoBehaviour
     {
         SceneManager.LoadScene(obj.name);
     }
+
+    public void _Th1()
+    {
+        SceneManager.LoadScene("Th1");
+    }
+
+    public void _Th2()
+    {
+        SceneManager.LoadScene("Th2");
+    }
+
+    public void _Th3()
+    {
+        SceneManager.LoadScene("Th3");
+    }
 }

@@ -19,9 +19,29 @@ public class FrogLine : MonoBehaviour
 
     public bool lvl = false;
 
+    public Animator animator;
+    public GameObject timePanel;
+    public GameObject btn;
+
     public string key_1 = "2345";
     public string key_2 = "2678";
     private bool flag = false;
+    
+
+    public GameObject[] OFF;
+
+    public void Start()
+    {
+        btn.SetActive(false);
+    }
+
+    public void off()
+    {
+        foreach (GameObject o in OFF)
+        {
+            o.SetActive(false);
+        }
+    }
     public void _click(GameObject obj)
     {
         string name = obj.name;
@@ -88,6 +108,28 @@ public class FrogLine : MonoBehaviour
 
         if(s.IndexOf(key_1) != -1 && s.IndexOf(key_2) != -1)
         {
+            GameObject[] obj;
+            obj = GameObject.FindGameObjectsWithTag("point");
+            foreach (GameObject i in obj)
+            {
+                Destroy(i);
+            }
+
+            timePanel.SetActive(false);
+
+            // Чек ачивки
+            if (PlayerPrefs.GetInt("diff") == 0)
+            {
+                PlayerPrefs.SetInt("lvl3", 1);
+            }
+            else
+            {
+                PlayerPrefs.SetInt("lvl3", 2);
+            }
+
+            animator.Play("compl");
+            Invoke("_btn", 0.8f);
+
             lvl = true;
             Debug.Log("LVL COMPLETE");
         }
@@ -98,6 +140,11 @@ public class FrogLine : MonoBehaviour
             Debug.Log("FAIL");
         }
 
+    }
+
+    public void _btn()
+    {
+        btn.SetActive(true);
     }
 
     public static Vector3 coordinateOne()
@@ -130,5 +177,12 @@ public class FrogLine : MonoBehaviour
         {
             Destroy(i);
         }
+    }
+
+    public void _continue()
+    {
+        animator.Play("finich");
+        btn.SetActive(false);
+        off();
     }
 }

@@ -11,6 +11,16 @@ public class GoToAddLvl : MonoBehaviour
         SceneManager.LoadScene("Puzzle");
     }
 
+    public void _Maze()
+    {
+        SceneManager.LoadScene("Maze");
+    }
+
+    public void _Go()
+    {
+        SceneManager.LoadScene("Go");
+    }
+
     public void _Menu()
     {
         SceneManager.LoadScene("Menu");
