@@ -12,18 +12,32 @@ public class LoadDifficulty : MonoBehaviour
     private bool flag;
     public Animator anim;
 
+    public GameObject[] HardOff; // Нужно выключить на харде
+    public GameObject[] SoftOff; // Нужно выключить на легком
     public void Start()
     {
         if(PlayerPrefs.GetInt("diff") == 0)
         {
+            // Новичек
             helpBtn.SetActive(true);
             Timer.SetActive(false);
+
+            foreach(GameObject obj in SoftOff)
+            {
+                obj.SetActive(false);
+            }
         }
         else
         {
+            // Опытный
             VoiceOBJ.transform.position = helpBtn.transform.position;
             Timer.SetActive(true);
             helpBtn.SetActive(false);
+
+            foreach (GameObject obj in HardOff)
+            {
+                obj.SetActive(false);
+            }
         }
 
         

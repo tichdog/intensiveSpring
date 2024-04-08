@@ -29,6 +29,7 @@ public class Menu : MonoBehaviour
 
     public void _backToMenu()
     {
+        PlayerPrefs.SetInt("lp", 0);
         animator.Play("lvl");
 
         /*panelMenu.SetActive(true);

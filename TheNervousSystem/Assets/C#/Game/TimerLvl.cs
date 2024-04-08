@@ -23,6 +23,7 @@ public class TimerLvl : MonoBehaviour
         text.text = "Оставшееся время: " + Mathf.Round(time).ToString();
         if(time < 0.5)
         {
+            WormLine.time = false;
             failPanel.SetActive(true);
         }
     }

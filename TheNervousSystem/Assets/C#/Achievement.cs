@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Achievement : MonoBehaviour
 {
+    public GameObject info;
     public GameObject panelAchivment;
     public Animator animator;
 
@@ -23,6 +24,13 @@ public class Achievement : MonoBehaviour
     {
         def();
         panelAchivment.SetActive(false);
+        _infoClose();
+        Debug.Log("Start Achivment " + PlayerPrefs.GetInt("MMS"));
+        if (PlayerPrefs.GetInt("MMS") == 1)
+        {
+            _achiv();
+        }
+
         if(PlayerPrefs.GetInt("lvl1") != 0) { lvl1 = PlayerPrefs.GetInt("lvl1"); }
         if (PlayerPrefs.GetInt("lvl2") != 0) { lvl2 = PlayerPrefs.GetInt("lvl2"); }
         if (PlayerPrefs.GetInt("lvl3") != 0) { lvl3 = PlayerPrefs.GetInt("lvl3"); }
@@ -93,7 +101,17 @@ public class Achievement : MonoBehaviour
     {
         animator.Play("close");
         Invoke("objOn", 0.3f);
-        
+        PlayerPrefs.SetInt("MMS", 0);
+    }
+
+    public void _infoOpen()
+    {
+        info.SetActive(true);
+    }
+
+    public void _infoClose()
+    {
+        info.SetActive(false);
     }
 
     private int sum()

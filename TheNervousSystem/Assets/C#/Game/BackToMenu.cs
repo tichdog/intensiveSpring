@@ -13,6 +13,7 @@ public class BackToMenu : MonoBehaviour
 
     public void _restart()
     {
+        WinHard.Remove();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

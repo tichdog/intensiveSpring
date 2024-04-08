@@ -1632,6 +1632,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 8170153791961219459, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 941926ed1a7f5a947afe9b219f4e0590, type: 3}
     - target: {fileID: 8170153792821263258, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_SizeDelta.x
       value: 500
@@ -2009,7 +2013,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041C\u0435\u043D\u044E"
+  m_Text: "\u041D\u0430\u0437\u0430\u0434"
 --- !u!222 &1657328906
 CanvasRenderer:
   m_ObjectHideFlags: 0
