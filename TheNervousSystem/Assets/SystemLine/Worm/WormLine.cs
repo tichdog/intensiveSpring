@@ -181,7 +181,11 @@ public class WormLine : MonoBehaviour
     
     public void _reset()
     {
-        catAnim.Play();
+        if (time)
+        {
+            catAnim.Play();
+        }
+        
         flag = false;
         point.Clear();
         GameObject[] obj;

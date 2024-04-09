@@ -36,9 +36,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Th1.unity
     guid: 65f5c566b20789c4abb9ed7ee7ebfb78
   - enabled: 1
-    path: Assets/Scenes/Th2.unity
+    path: Assets/Scenes/Th3.unity
     guid: 8bedba699a8f02049b52f5305bd46b8a
   - enabled: 1
-    path: Assets/Scenes/Th3.unity
+    path: Assets/Scenes/Th2.unity
     guid: f48383d36a088ad4597629696cd8c560
   m_configObjects: {}

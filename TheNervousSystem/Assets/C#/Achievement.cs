@@ -26,6 +26,7 @@ public class Achievement : MonoBehaviour
         panelAchivment.SetActive(false);
         _infoClose();
         Debug.Log("Start Achivment " + PlayerPrefs.GetInt("MMS"));
+
         if (PlayerPrefs.GetInt("MMS") == 1)
         {
             _achiv();
@@ -63,6 +64,19 @@ public class Achievement : MonoBehaviour
 
         animator.Play("open");
 
+        sumCheck();     
+    }
+
+    public void Update()
+    {
+        if(panelAchivment.activeSelf == true)
+        {
+            sumCheck();
+        }
+    }
+
+    public void sumCheck()
+    {
         if(sum() >= 1)
         {
             achivOneStep.transform.Find("on").gameObject.SetActive(true);

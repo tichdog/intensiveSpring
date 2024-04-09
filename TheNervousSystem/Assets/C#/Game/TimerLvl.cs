@@ -24,6 +24,11 @@ public class TimerLvl : MonoBehaviour
         if(time < 0.5)
         {
             WormLine.time = false;
+            HydraLine.time = false;
+            GrasshopperLine.time = false;
+            FrogLine.time = false;
+            HumanLine.time = false;
+
             failPanel.SetActive(true);
         }
     }

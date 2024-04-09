@@ -33,6 +33,14 @@ public class MovingPuzzle : MonoBehaviour
         {
             this.transform.position = new Vector2(form.transform.position.x, form.transform.position.y);
             finish = true;
+
+            //New
+            form.gameObject.GetComponent<SpriteRenderer>().color = new Color(255,255,255,255);
+            gameObject.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            
+            //
+
             WinScript.AddElement();
         }
     }

@@ -86,25 +86,15 @@ public class HydraLine : MonoBehaviour
         }
     }
 
-/*    private void Update()
+    private void Update()
     {
-        if (point.Count == count && WinHard.finish == true && lvl == false) // finish - на местах ли элементы
-        {
-            check();
-        }
-
-        if (point.Count == count && PlayerPrefs.GetInt("diff") == 0 && lvl == false)
-        {
-            check();
-        }
-
-        if (point.Count > count + 1 || time == false)
+        if (time == false)
         {
             lvl = false;
             _reset();
             Debug.Log("FAIL");
         }
-    }*/
+    }
 
     public void check()
     {
@@ -185,7 +175,10 @@ public class HydraLine : MonoBehaviour
     
     public void _reset()
     {
-        catAnim.Play();
+        if (time)
+        {
+            catAnim.Play();
+        }
         flag = false;
         point.Clear();
         GameObject[] obj;

@@ -12,6 +12,7 @@ public class MazeLvlContrller : MonoBehaviour
     
     public void _menu()
     {
+        PlayerPrefs.SetInt("MMS", 1);
         SceneManager.LoadScene("Menu");
     }
 }

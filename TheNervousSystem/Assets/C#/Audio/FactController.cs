@@ -54,5 +54,4 @@ public class FactController : MonoBehaviour
         flag = false;
     }
 
-
 }
