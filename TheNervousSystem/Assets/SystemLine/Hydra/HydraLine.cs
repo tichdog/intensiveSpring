@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Linq;
 using UnityEngine.Experimental.GlobalIllumination;
 
-public class WormLine : MonoBehaviour
+public class HydraLine : MonoBehaviour
 {
     // Счетчик для линий
     public int count = 0;
@@ -24,13 +24,14 @@ public class WormLine : MonoBehaviour
     public GameObject timePanel;
     public GameObject btn;
 
-    private string key_1 = "1234";
+    private string key_1 = "13"; // + лоп ключи в условии чека
 
     private bool flag = false;
 
     public static bool time;
 
     public GameObject[] OFF;
+
     public void Start()
     {
         time = true; // true время есть 
@@ -39,7 +40,7 @@ public class WormLine : MonoBehaviour
 
     public void off()
     {
-        foreach(GameObject i in OFF)
+        foreach (GameObject i in OFF)
         {
             i.SetActive(false);
         }
@@ -79,17 +80,20 @@ public class WormLine : MonoBehaviour
             flag = false;
         }
 
-         
-    }
-
-    private void Update()
-    {
-        if(point.Count == count && WinHard.finish == true && lvl == false) // finish - на местах ли элементы
+        if (point.Count == count)
         {
             check();
-        }  
+        }
+    }
 
-        if(point.Count == count && PlayerPrefs.GetInt("diff") == 0 && lvl == false)
+/*    private void Update()
+    {
+        if (point.Count == count && WinHard.finish == true && lvl == false) // finish - на местах ли элементы
+        {
+            check();
+        }
+
+        if (point.Count == count && PlayerPrefs.GetInt("diff") == 0 && lvl == false)
         {
             check();
         }
@@ -100,7 +104,7 @@ public class WormLine : MonoBehaviour
             _reset();
             Debug.Log("FAIL");
         }
-    }
+    }*/
 
     public void check()
     {
@@ -118,7 +122,7 @@ public class WormLine : MonoBehaviour
 
         Debug.Log(s);
 
-        if(s.IndexOf(key_1) != -1)
+        if(s.IndexOf(key_1) != -1 && s.IndexOf("34") != -1 && s.IndexOf("35") != -1 && s.IndexOf("23") != -1 && s.IndexOf("36") != -1 && s.IndexOf("67") != -1 && s.IndexOf("78") != -1 && s.IndexOf("89") != -1)
         {
             GameObject[] obj;
             obj = GameObject.FindGameObjectsWithTag("point");
@@ -133,11 +137,11 @@ public class WormLine : MonoBehaviour
             // Чек ачивки
             if(PlayerPrefs.GetInt("diff") == 0)
             {
-                PlayerPrefs.SetInt("lvl2", 1);
+                PlayerPrefs.SetInt("lvl1", 1);
             }
             else
             {
-                PlayerPrefs.SetInt("lvl2", 2);
+                PlayerPrefs.SetInt("lvl1", 2);
             }
 
             animator.Play("compl");
