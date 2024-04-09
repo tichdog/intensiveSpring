@@ -141,11 +141,11 @@ public class FrogLine : MonoBehaviour
             // Чек ачивки
             if (PlayerPrefs.GetInt("diff") == 0)
             {
-                PlayerPrefs.SetInt("lvl3", 1);
+                PlayerPrefs.SetInt("lvl4", 1);
             }
             else
             {
-                PlayerPrefs.SetInt("lvl3", 2);
+                PlayerPrefs.SetInt("lvl4", 2);
             }
 
             animator.Play("compl");
