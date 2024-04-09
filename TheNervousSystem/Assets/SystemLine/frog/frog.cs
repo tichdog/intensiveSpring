@@ -12,8 +12,8 @@ public class frog : MonoBehaviour
     public void Start()
     {
         line = GetComponent<LineRenderer>();
-        line.startWidth = 0.5f;
-        line.endWidth = 0.5f;
+        line.startWidth = 0.3f;
+        line.endWidth = 0.3f;
         line.positionCount = 0; // Обнуляем точки
 
         one = FrogLine.coordinateOne();

@@ -20,18 +20,22 @@ public class FrogLine : MonoBehaviour
     public bool lvl = false;
 
     public Animator animator;
+    public Animation catAnim;
     public GameObject timePanel;
     public GameObject btn;
 
     public string key_1 = "2345";
     public string key_2 = "2678";
+
     private bool flag = false;
-    
+
+    public static bool time;
 
     public GameObject[] OFF;
 
     public void Start()
     {
+        time = true;
         btn.SetActive(false);
     }
 
@@ -76,10 +80,26 @@ public class FrogLine : MonoBehaviour
             flag = false;
         }
 
-        if(point.Count == count)
+    }
+
+    private void Update()
+    {
+        if (point.Count == count && WinHard.finish == true && lvl == false) // finish - на местах ли элементы
         {
             check();
-        }   
+        }
+
+        if (point.Count == count && PlayerPrefs.GetInt("diff") == 0 && lvl == false)
+        {
+            check();
+        }
+
+        if (point.Count > count + 1 || time == false)
+        {
+            lvl = false;
+            _reset();
+            Debug.Log("FAIL");
+        }
     }
 
     public void check()
@@ -115,6 +135,7 @@ public class FrogLine : MonoBehaviour
                 Destroy(i);
             }
 
+            lvl = true;
             timePanel.SetActive(false);
 
             // Чек ачивки
@@ -128,9 +149,7 @@ public class FrogLine : MonoBehaviour
             }
 
             animator.Play("compl");
-            Invoke("_btn", 0.8f);
-
-            lvl = true;
+            Invoke("_btn", 0.8f);      
             Debug.Log("LVL COMPLETE");
         }
         else
@@ -170,6 +189,8 @@ public class FrogLine : MonoBehaviour
     
     public void _reset()
     {
+        catAnim.Play();
+        flag = false;
         point.Clear();
         GameObject[] obj;
         obj = GameObject.FindGameObjectsWithTag("point");
