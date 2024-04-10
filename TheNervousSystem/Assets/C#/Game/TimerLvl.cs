@@ -10,7 +10,7 @@ public class TimerLvl : MonoBehaviour
     public Text text;
     public GameObject failPanel;
 
-
+    public AudioSource audioOff;
     public void Start()
     {
         failPanel.SetActive(false);
@@ -23,6 +23,8 @@ public class TimerLvl : MonoBehaviour
         text.text = "Оставшееся время: " + Mathf.Round(time).ToString();
         if(time < 0.5)
         {
+            audioOff.Stop();
+
             WormLine.time = false;
             HydraLine.time = false;
             GrasshopperLine.time = false;

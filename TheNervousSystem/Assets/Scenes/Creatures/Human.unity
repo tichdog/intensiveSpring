@@ -4540,7 +4540,7 @@ GameObject:
   m_Layer: 5
   m_Name: Human
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -6436,6 +6436,7 @@ MonoBehaviour:
   time: 70
   text: {fileID: 37506039}
   failPanel: {fileID: 723720797}
+  audioOff: {fileID: 1546696734}
 --- !u!1 &1454903038
 GameObject:
   m_ObjectHideFlags: 0
@@ -7454,7 +7455,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.113218755, y: 0.1553889}
   m_AnchorMax: {x: 0.8885625, y: 0.44675928}
-  m_AnchoredPosition: {x: 663.99915, y: 5}
+  m_AnchoredPosition: {x: 663.9994, y: 5}
   m_SizeDelta: {x: 602.84955, y: 1382}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &1729699221
@@ -9150,18 +9151,10 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1546696737}
-    - target: {fileID: 1400529215470926897, guid: 970b08306dfcd5045954d425cc3e3dbc, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -481.00012
-      objectReference: {fileID: 0}
     - target: {fileID: 2390858582373924146, guid: 970b08306dfcd5045954d425cc3e3dbc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 778625844}
-    - target: {fileID: 3236562428159310008, guid: 970b08306dfcd5045954d425cc3e3dbc, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 3887747686808966825, guid: 970b08306dfcd5045954d425cc3e3dbc, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -9264,11 +9257,7 @@ PrefabInstance:
       objectReference: {fileID: 778625844}
     - target: {fileID: 7301858503983291246, guid: 970b08306dfcd5045954d425cc3e3dbc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Worm
-      objectReference: {fileID: 0}
-    - target: {fileID: 7949406185769422869, guid: 970b08306dfcd5045954d425cc3e3dbc, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -412.1
+      value: Hydra
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

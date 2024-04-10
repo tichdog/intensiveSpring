@@ -4758,6 +4758,7 @@ MonoBehaviour:
   time: 50
   text: {fileID: 37506039}
   failPanel: {fileID: 723720797}
+  audioOff: {fileID: 1546696734}
 --- !u!1 &1423148720
 GameObject:
   m_ObjectHideFlags: 0
@@ -7143,6 +7144,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 778625844}
+    - target: {fileID: 7301858503983291246, guid: 970b08306dfcd5045954d425cc3e3dbc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Human
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

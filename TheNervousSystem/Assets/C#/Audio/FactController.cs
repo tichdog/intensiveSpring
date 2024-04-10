@@ -54,4 +54,12 @@ public class FactController : MonoBehaviour
         flag = false;
     }
 
+    public void Update()
+    {
+        if(audio.isPlaying == false)
+        {
+            _pause();
+        }
+    }
+
 }

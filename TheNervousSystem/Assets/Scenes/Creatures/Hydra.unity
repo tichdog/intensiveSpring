@@ -3553,6 +3553,7 @@ MonoBehaviour:
   time: 30
   text: {fileID: 37506039}
   failPanel: {fileID: 723720797}
+  audioOff: {fileID: 1546696734}
 --- !u!1 &1454903038
 GameObject:
   m_ObjectHideFlags: 0
