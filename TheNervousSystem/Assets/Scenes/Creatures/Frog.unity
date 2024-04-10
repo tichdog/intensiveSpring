@@ -3016,7 +3016,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 475ab2514fc726041ae21db807b608c7, type: 3}
   - {fileID: 8300000, guid: f1aeaa504a3a29b4a96ab5f50b40bf7a, type: 3}
   - {fileID: 8300000, guid: 49d5239a3a2c41b4a83c1071ca9bd585, type: 3}
-  - {fileID: 8300000, guid: 89fe928dc8c6e9a4bbcb4a47ecd2f39e, type: 3}
 --- !u!1 &922453678
 GameObject:
   m_ObjectHideFlags: 0
@@ -7144,10 +7143,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 778625844}
-    - target: {fileID: 7301858503983291246, guid: 970b08306dfcd5045954d425cc3e3dbc, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Human
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8438,7 +8433,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!222 &8376658723438470185
 CanvasRenderer:
   m_ObjectHideFlags: 0

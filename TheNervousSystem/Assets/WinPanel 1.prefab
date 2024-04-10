@@ -227,7 +227,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Grasshopper
+          m_StringArgument: Human
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1227869309304141111
@@ -501,7 +501,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.21746877, y: 0.5}
   m_AnchorMax: {x: 0.78062516, y: 0.8562408}
-  m_AnchoredPosition: {x: 4.000122, y: 145}
+  m_AnchoredPosition: {x: 4.000122, y: -224}
   m_SizeDelta: {x: 2.8999023, y: 2.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2209925141245328562
@@ -525,7 +525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8774724, g: 0.94716984, b: 0.9341016, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -534,11 +534,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 24e0d04b81e40194aa20482168bac821, type: 3}
-    m_FontSize: 175
+    m_FontSize: 200
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 183
+    m_MinSize: 2
+    m_MaxSize: 200
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -560,7 +560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0.43529415, b: 0.3803922, a: 0.78431374}
-  m_EffectDistance: {x: 10, y: -4}
+  m_EffectDistance: {x: 14, y: -4}
   m_UseGraphicAlpha: 1
 --- !u!1 &4851984286902453019
 GameObject:
@@ -630,7 +630,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0cf56a03c8d8385408ff72f7508fb6b6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c8b7b9103b8af6a4b934337284988497, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
