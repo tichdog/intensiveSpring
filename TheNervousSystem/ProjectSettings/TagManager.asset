@@ -6,6 +6,8 @@ TagManager:
   tags:
   - point
   - cell
+  - speedUp
+  - barrer
   layers:
   - Default
   - TransparentFX
