@@ -90,4 +90,17 @@ public class Player : MonoBehaviour
     {
         Down();
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            Up();
+        }
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            Down();
+        }
+    }
 }

@@ -49,6 +49,5 @@ public class GoToAddLvl : MonoBehaviour
     {
         _Puzzle();
         WinScript.Remove();
-
     }
 }

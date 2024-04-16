@@ -8,6 +8,7 @@ TagManager:
   - cell
   - speedUp
   - barrer
+  - track
   layers:
   - Default
   - TransparentFX

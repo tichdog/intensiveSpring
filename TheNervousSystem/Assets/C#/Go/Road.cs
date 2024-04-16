@@ -12,10 +12,16 @@ public class Road : MonoBehaviour
     public void Start()
     {
         dir = new Vector2(speed, 0);
+        defoultSpeed();
     }
     public void FixedUpdate()
     {
         dir = new Vector2(speed, 0);
         roadObj.transform.Translate(dir);
+    }
+
+    public static void defoultSpeed()
+    {
+        speed = -0.4f;
     }
 }

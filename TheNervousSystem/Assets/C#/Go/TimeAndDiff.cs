@@ -1,7 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting.Antlr3.Runtime.Tree;
-using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +7,7 @@ public class TimeAndDiff : MonoBehaviour
 {
     public Text textTime;
     public GameObject failPanel;
+    public GameObject player;
 
     private int deff;
     private float maxTime;
@@ -20,11 +19,11 @@ public class TimeAndDiff : MonoBehaviour
         deff = PlayerPrefs.GetInt("diff", 0);
         if( deff == 0)
         {
-            maxTime = time = 40f;
+            maxTime = time = 60f;
         }
         else
         {
-            maxTime = time = 35f;
+            maxTime = time = 45f;
         }
 
         failPanel.SetActive(false);
@@ -41,6 +40,7 @@ public class TimeAndDiff : MonoBehaviour
             if(time <= 0.2f)
             {
                 Road.speed = 0;
+                player.SetActive(false);
                 failPanel.SetActive(true);
             }
         }
@@ -55,4 +55,6 @@ public class TimeAndDiff : MonoBehaviour
     {
         flag = false;
     }
+
+
 }
